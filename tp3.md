@@ -1,9 +1,9 @@
 # TP 3 : Admin Linux
 
 **Exercice 1:**  
-1. Bash trouve les commandes dans la variable $PATH qui mènent vers `/usr/bin` ainsi que tous les autres fichiers `/bin` et `/sbin`.
-2. La variable d'environnement permettant à la commande `cd` sans argument de nous ramener au répertoire personnel est la variable `$HOME`.
-3. La variable `LANG` est la variable affectant langue du système. La variable `PWD` contient le chemin du répertoire courant. La variable `OLDPWD` contient le répertoire de travail précédent le répertoir actuel. La variable `SHELL` contient l'interpréteur de commande actuel.
-4. Pour créer la variable `MY_VAR` on fait `MY_VAR="000"` elle contient donc "000" et pour vérifier cela on peut effectuer `echo $MY_VAR`.
-5. La commande `bash` lance un nouvel interpréteur de commande et la variable `MY_VAR` n'existe donc pas dans celui-ci.
-6. Pour créer 
+1. Afin de créer les groupes on va éxecuter la commande ```groupadd nom_groupe``` avec en argument les noms de groupe choisi.
+2. Pour créer des utilisateurs avec un dossier personnel on va effectuer la commande ```sudo useradd -m nom_user```. Le ```-m``` permet d'ajouter le répertoire personnel lors de la création.
+3. Une commande permettant d'ajouter des utilisateurs à des groupes est ```sudo usermod -a -G nom_groupe nom_user``` en fournissant comme argument groupe et username.
+4. Afin de visualiser les membres du groupes on peut effectuer la commande ```cat /etc/group``` qui listera les membres pour tous les groupes. On peut donc affiner la précision avec un 'grep' ou même uniquement utiliser grep avec ```grep -w infra /etc/group```.
+
+
